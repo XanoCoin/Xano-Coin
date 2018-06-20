@@ -1,0 +1,26 @@
+[Unit]
+Description=Xano's distributed currency daemon
+After=network.target
+
+[Service]
+User=Xano
+Group=Xano
+
+Type=forking
+PIDFile=/var/lib/Xanod/Xanod.pid
+
+ExecStart=/usr/bin/Xanod -daemon -pid=/var/lib/Xanod/Xanod.pid \
+          -conf=/etc/Xano/Xano.conf -datadir=/var/lib/Xanod
+
+ExecStop=-/usr/bin/Xano-cli -conf=/etc/Xano/Xano.conf \
+         -datadir=/var/lib/Xanod stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

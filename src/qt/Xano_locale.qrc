@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/Xano_bg.qm</file>
+        <file alias="ca">locale/Xano_ca.qm</file>
+        <file alias="cs">locale/Xano_cs.qm</file>
+        <file alias="da">locale/Xano_da.qm</file>
+        <file alias="de">locale/Xano_de.qm</file>
+        <file alias="en">locale/Xano_en.qm</file>
+        <file alias="en_US">locale/Xano_en_US.qm</file>
+        <file alias="es">locale/Xano_es.qm</file>
+        <file alias="fi">locale/Xano_fi.qm</file>
+        <file alias="fr_FR">locale/Xano_fr_FR.qm</file>
+        <file alias="hr">locale/Xano_hr.qm</file>
+        <file alias="it">locale/Xano_it.qm</file>
+        <file alias="ja">locale/Xano_ja.qm</file>
+        <file alias="ko_KR">locale/Xano_ko_KR.qm</file>
+        <file alias="nl">locale/Xano_nl.qm</file>
+        <file alias="pl">locale/Xano_pl.qm</file>
+        <file alias="pt">locale/Xano_pt.qm</file>
+        <file alias="pt_BR">locale/Xano_pt_BR.qm</file>
+        <file alias="ro_RO">locale/Xano_ro_RO.qm</file>
+        <file alias="ru">locale/Xano_ru.qm</file>
+        <file alias="sk">locale/Xano_sk.qm</file>
+        <file alias="sv">locale/Xano_sv.qm</file>
+        <file alias="tr">locale/Xano_tr.qm</file>
+        <file alias="uk">locale/Xano_uk.qm</file>
+        <file alias="zh_CN">locale/Xano_zh_CN.qm</file>
+        <file alias="zh_TW">locale/Xano_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Xano
+Comment=Xano P2P Cryptocurrency
+Comment[fr]=Xano, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Xano, eşten eşe kriptografik sanal para birimi
+Exec=Xano-qt %u
+Terminal=false
+Type=Application
+Icon=Xano128
+MimeType=x-scheme-handler/Xano;
+Categories=Office;Finance;

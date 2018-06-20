@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  Xanod The Xano core server.
+#
+#
+# chkconfig: 345 80 20
+# description: Xanod
+# processname: Xanod
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/Xanod, see below
+if [ -f /etc/sysconfig/Xanod ]; then
+        . /etc/sysconfig/Xanod
+fi
+
+RETVAL=0
+
+prog=Xanod
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/Xanod
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/Xanod}
+
+# Xanod defaults to /usr/bin/Xanod, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/Xanod}
+
+# Xanod opts default to -disablewallet, override with BITCOIND_OPTS
+bitcoind_opts=${BITCOIND_OPTS}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
