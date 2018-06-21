@@ -19,8 +19,8 @@
 #include <string>
 
 #define MESSAGE_START_SIZE 4
-#define MNA 5000
-#define MNA2 4999.99
+#define MNA 10000
+#define MNA2 9999.99
 
 /** Message header.
  * (4) message start.
